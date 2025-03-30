@@ -1,0 +1,43 @@
+version: '3.1'
+
+nlu:
+- intent: generate_recipe
+  examples: |
+    - I want to make a recipe
+    - Generate a recipe for me
+    - Create a new dish
+    - What can I cook today?
+    - I'm looking for a recipe with [chicken](ingredient)
+    - Make an [Italian](cuisine) recipe
+    - I want an [easy](difficulty) recipe
+
+- intent: recipe_variation
+  examples: |
+    - Give me variations of this recipe
+    - Can you modify the recipe?
+    - I want something different
+    - Create alternative versions
+    - Suggest recipe alternatives
+
+- intent: find_similar_recipes
+  examples: |
+    - Find recipes similar to this
+    - I want recipes like this one
+    - Show me related recipes
+    - What other recipes are close to this?
+
+- intent: greet
+  examples: |
+    - Hi
+    - Hello
+    - Hey there
+    - Good morning
+    - What's up?
+
+- intent: goodbye
+  examples: |
+    - Bye
+    - Goodbye
+    - See you later
+    - Exit
+    - Close

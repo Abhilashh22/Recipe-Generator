@@ -1,0 +1,12 @@
+ame,ingredients,instructions,cuisine,difficulty
+Chicken Pasta,chicken breast,spaghetti,olive oil,garlic,tomato sauce,"1. Cook pasta according to package instructions. 2. Slice chicken into thin strips. 3. Sauté chicken in olive oil. 4. Add garlic and tomato sauce. 5. Combine with pasta.",Italian,medium
+Vegetable Stir Fry,tofu,bell peppers,soy sauce,ginger,vegetable oil,"1. Cube tofu. 2. Chop vegetables. 3. Heat oil in wok. 4. Stir fry tofu and vegetables. 5. Add soy sauce and ginger.",Asian,easy
+Beef Stew,beef chunks,potatoes,carrots,beef broth,onions,"1. Brown beef chunks. 2. Add chopped vegetables. 3. Pour in beef broth. 4. Simmer for 2 hours. 5. Season to taste.",American,hard
+Butter Chicken,chicken,butter,tomato puree,cream,spices,"1. Marinate chicken with spices. 2. Sauté chicken in butter. 3. Add tomato puree and cream. 4. Simmer until cooked. 5. Serve with naan or rice.",North Indian,medium
+Hyderabadi Biryani,basmati rice,chicken,yogurt,saffron,spices,"1. Marinate chicken with yogurt and spices. 2. Layer rice and chicken in a pot. 3. Cook with dum (steam) method. 4. Garnish with fried onions and saffron. 5. Serve hot.",South Indian,hard
+Daal Tadka,lentils,garlic,onion,tomato,spices,"1. Boil lentils until soft. 2. Prepare tadka with garlic, onion, and spices. 3. Mix tadka with boiled lentils. 4. Simmer and serve with rice or roti.",North Indian,easy
+Aloo Gobi,potatoes,cauliflower,tomato,spices,ginger,"1. Chop potatoes and cauliflower. 2. Sauté ginger and spices. 3. Add vegetables and cook until tender. 4. Garnish with cilantro and serve.",North Indian,easy
+Palak Paneer,spinach,paneer,onion,tomato,spices,"1. Blanch spinach and grind to a paste. 2. Sauté onion, tomato, and spices. 3. Add spinach paste and paneer cubes. 4. Cook and serve with roti or naan.",North Indian,medium
+Chole Bhature,chickpeas,onion,tomato,spices,flour,"1. Boil chickpeas until tender. 2. Prepare masala with onion, tomato, and spices. 3. Combine with chickpeas. 4. Prepare bhature dough, roll, and deep fry. 5. Serve together.",North Indian,medium
+Idli Sambar,rice,lentils,vegetables,sambar powder,curry leaves,"1. Soak and grind rice and lentils for batter. 2. Steam batter in idli molds. 3. Prepare sambar by cooking vegetables with lentils and spices. 4. Serve idli with sambar and chutney.",South Indian,medium
+Samosa,flour,potatoes,peas,spices,oil,"1. Prepare dough with flour and water. 2. Make filling with boiled potatoes, peas, and spices. 3. Shape dough into cones, fill, and seal. 4. Deep fry until golden brown.",North Indian,medium

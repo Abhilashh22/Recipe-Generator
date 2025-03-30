@@ -1,0 +1,46 @@
+version: '3.1'
+
+intents:
+  - generate_recipe
+  - recipe_variation
+  - find_similar_recipes
+  - greet
+  - goodbye
+
+entities:
+  - ingredient
+  - cuisine
+  - difficulty
+
+slots:
+  ingredient:
+    type: text
+    influence_conversation: false
+  cuisine:
+    type: text
+    influence_conversation: false
+  difficulty:
+    type: text
+    influence_conversation: false
+
+responses:
+  utter_greet:
+    - text: "Hi there! I'm your AI Recipe Generator. What kind of recipe would you like to create?"
+  
+  utter_generate_recipe:
+    - text: "Great! I'll help you generate a recipe based on your preferences."
+  
+  utter_recipe_variation:
+    - text: "Sure, I'll create some exciting variations for you!"
+  
+  utter_goodbye:
+    - text: "Goodbye! Enjoy your cooking!"
+
+actions:
+  - generate_recipe_action
+  - recipe_variation_action
+  - find_similar_recipes_action
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

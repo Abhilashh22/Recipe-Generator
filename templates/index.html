@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Recipe Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        #recipe-form {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        #recipe-input {
+            flex-grow: 1;
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        #generate-btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #results {
+            margin-top: 20px;
+        }
+
+        .recipe-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>AI Recipe Finder</h1>
+
+    <form id="recipe-form">
+        <input type="text" id="recipe-input" placeholder="Enter the recipe name (e.g., 'Paneer Butter Masala')"
+            required>
+        <button type="submit" id="generate-btn">Find Recipe</button>
+    </form>
+
+    <div id="results">
+        <!-- Recipe details will appear here -->
+    </div>
+
+    <script>
+        const recipes = {
+            "Chicken Pasta": {
+                ingredients: "Chicken breast, Spaghetti, Olive oil, Garlic, Tomato sauce",
+                instructions: "1. Cook pasta according to package instructions\n2. Slice chicken into thin strips\n3. Sauté chicken in olive oil\n4. Add garlic and tomato sauce\n5. Combine with pasta",
+                cuisine: "Italian",
+                difficulty: "Medium"
+            },
+            "Vegetable Stir Fry": {
+                ingredients: "Tofu, Bell peppers, Soy sauce, Ginger, Vegetable oil",
+                instructions: "1. Cube tofu\n2. Chop vegetables\n3. Heat oil in wok\n4. Stir fry tofu and vegetables\n5. Add soy sauce and ginger",
+                cuisine: "Asian",
+                difficulty: "Easy"
+            },
+            "Beef Stew": {
+                ingredients: "Beef chunks, Potatoes, Carrots, Beef broth, Onions",
+                instructions: "1. Brown beef chunks\n2. Add chopped vegetables\n3. Pour in beef broth\n4. Simmer for 2 hours\n5. Season to taste",
+                cuisine: "American",
+                difficulty: "Hard"
+            },
+             "Butter Chicken": {
+                ingredients: "Chicken, Butter, Tomato puree, Cream, Spices",
+                instructions: "1. Marinate chicken with spices\n2. Sauté chicken in butter\n3. Add tomato puree and cream\n4. Simmer until cooked\n5. Serve with naan or rice",
+                cuisine: "North Indian",
+                difficulty: "Medium"
+            },
+            "Hyderabadi Biryani": {
+                ingredients: "Basmati rice, Chicken, Yogurt, Saffron, Spices",
+                instructions: "1. Marinate chicken with yogurt and spices\n2. Layer rice and chicken in a pot\n3. Cook with dum (steam) method\n4. Garnish with fried onions and saffron\n5. Serve hot",
+                cuisine: "South Indian",
+                difficulty: "Hard"
+            },
+            "Daal Tadka": {
+                ingredients: "Lentils, Garlic, Onion, Tomato, Spices",
+                instructions: "1. Boil lentils until soft\n2. Prepare tadka with garlic, onion, and spices\n3. Mix tadka with boiled lentils\n4. Simmer and serve with rice or roti",
+                cuisine: "North Indian",
+                difficulty: "Easy"
+            },
+            "Aloo Gobi": {
+                ingredients: "Potatoes, Cauliflower, Tomato, Spices, Ginger",
+                instructions: "1. Chop potatoes and cauliflower\n2. Sauté ginger and spices\n3. Add vegetables and cook until tender\n4. Garnish with cilantro and serve",
+                cuisine: "North Indian",
+                difficulty: "Easy"
+            },
+            "Palak Paneer": {
+                ingredients: "Spinach, Paneer, Onion, Tomato, Spices",
+                instructions: "1. Blanch spinach and grind to a paste\n2. Sauté onion, tomato, and spices\n3. Add spinach paste and paneer cubes\n4. Cook and serve with roti or naan",
+                cuisine: "North Indian",
+                difficulty: "Medium"
+            }
+            // Add more recipes here as needed
+        };
+
+        document.getElementById('recipe-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const query = document.getElementById('recipe-input').value.trim();
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<p>Generating recipe...</p>'; // Placeholder text while generating
+
+            setTimeout(() => { // Simulate a delay for generating the recipe
+                resultsDiv.innerHTML = ''; // Clear the placeholder text
+
+                if (recipes[query]) {
+                    const recipe = recipes[query];
+                    const recipeCard = document.createElement('div');
+                    recipeCard.classList.add('recipe-card');
+                    recipeCard.innerHTML = `
+                        <h2>${query}</h2>
+                        <h3>Ingredients:</h3>
+                        <p>${recipe.ingredients}</p>
+                        <h3>Instructions:</h3>
+                        <p>${recipe.instructions.replace(/\n/g, '<br>')}</p>
+                        <p><strong>Cuisine:</strong> ${recipe.cuisine}</p>
+                        <p><strong>Difficulty:</strong> ${recipe.difficulty}</p>
+                    `;
+                    resultsDiv.appendChild(recipeCard);
+                } else {
+                    resultsDiv.innerHTML = `<p>No recipe found for "${query}". Please try another name.</p>`;
+                }
+            }, 1500); // Simulated 1.5-second delay for AI generation
+        });
+    </script>
+</body>
+
+</html>
